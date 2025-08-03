@@ -1,0 +1,6 @@
+@KassaProWeb_HostAddress = http://localhost:5250
+
+GET {{KassaProWeb_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
