@@ -21,7 +21,7 @@ public  class Category
     public virtual ICollection<SubCategory> SubCategories { get; set; } = new List<SubCategory>();
     public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 
-    public long? CompanyId { get; set; }
+    public ulong? CompanyId { get; set; }
     public virtual Company? Company { get; set; }
 
 }

@@ -14,7 +14,7 @@ public partial class ProductStockIn
 
     public ulong CreatedByAdminId { get; set; } 
 
-    public long? CompanyId { get; set; }
+    public ulong? CompanyId { get; set; }
 
     public virtual Product Product { get; set; } = null!;
 

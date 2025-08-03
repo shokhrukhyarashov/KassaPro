@@ -15,6 +15,6 @@ public partial class BusinessSetting
 
     public DateTime? UpdatedAt { get; set; }
 
-    public long? CompanyId { get; set; }
+    public ulong? CompanyId { get; set; }
     public virtual Company?  Company { get; set; }
 }

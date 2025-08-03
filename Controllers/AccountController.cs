@@ -48,7 +48,7 @@ public class AccountController : ControllerBase
             Account1 = dto.Account,
             AccountNumber = dto.AccountNumber,
             Description = dto.Description,
-            Balance = dto.Balance,
+            // Balance = dto.Balance,
             CreatedAt = DateTime.UtcNow
         };
 

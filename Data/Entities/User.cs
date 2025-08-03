@@ -13,7 +13,7 @@ public partial class User
 
     public DateTime? EmailVerifiedAt { get; set; }
 
-    public string Password { get; set; } = null!;
+    public string password { get; set; } = null!;
 
     public string? RememberToken { get; set; }
 
