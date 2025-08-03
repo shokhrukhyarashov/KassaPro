@@ -14,4 +14,7 @@ public partial class Unit
     public DateTime? UpdatedAt { get; set; }
 
     public long? CompanyId { get; set; }
+    public virtual Company? Company { get; set; }
+
+    public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 }

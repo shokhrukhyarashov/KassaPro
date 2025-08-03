@@ -11,11 +11,13 @@ public partial class Product
 
     public string ProductCode { get; set; } = null!;
 
-    public uint? UnitType { get; set; }
+    public ulong? UnitId { get; set; }
+    public virtual Unit? Unit { get; set; }
 
     public double? UnitValue { get; set; }
 
-    public string? Brand { get; set; }
+    public ulong? BrandId { get; set; }
+    public virtual Brand? Brand { get; set; }
 
     public long? CompanyId { get; set; }
     public virtual Company? Company { get; set; }
@@ -26,15 +28,15 @@ public partial class Product
     public ulong? SubCategoryId { get; set; }
     public virtual SubCategory? SubCategory { get; set; }
 
-    public double? PurchasePrice { get; set; }
+    public decimal? PurchasePrice { get; set; }
 
-    public double? SellingPrice { get; set; }
+    public decimal? SellingPrice { get; set; }
 
     public string? DiscountType { get; set; }
 
-    public double? Discount { get; set; }
+    public decimal? Discount { get; set; }
 
-    public double? Tax { get; set; }
+    public decimal? Tax { get; set; }
 
     public long? Quantity { get; set; }
 
@@ -42,7 +44,9 @@ public partial class Product
 
     public uint? OrderCount { get; set; }
 
-    public uint? SupplierId { get; set; }
+    public ulong? SupplierId { get; set; }
+    public virtual ICollection<ProductStockIn> ProductStockIns { get; set; } = new List<ProductStockIn>();
+
 
     public DateTime? CreatedAt { get; set; }
 

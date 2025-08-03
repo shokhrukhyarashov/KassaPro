@@ -10,6 +10,7 @@ public partial class Transaction
     public string? TranType { get; set; }
 
     public ulong? AccountId { get; set; }
+    public virtual Account? Account { get; set; }
 
     public double? Amount { get; set; }
 
@@ -23,15 +24,20 @@ public partial class Transaction
 
     public DateOnly? Date { get; set; }
 
-    public uint? CustomerId { get; set; }
+    public ulong? CustomerId { get; set; }
+    public virtual Customer? Customer { get; set; }
 
-    public uint? SupplierId { get; set; }
+    public ulong? SupplierId { get; set; }
+    public virtual Supplier? Supplier { get; set; }
 
-    public uint? OrderId { get; set; }
+    public ulong? OrderId { get; set; }
+    public virtual Order? Order { get; set; }
 
     public DateTime? CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
 
-    public long? CompanyId { get; set; }
+    public ulong? CompanyId { get; set; }
+    public virtual Company? Company { get; set; }
 }
+

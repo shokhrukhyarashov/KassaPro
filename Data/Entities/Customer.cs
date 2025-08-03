@@ -9,7 +9,7 @@ public partial class Customer
 
     public string Name { get; set; } = null!;
 
-    public string Mobile { get; set; } = null!;
+    public string? Mobile { get; set; } = null!;
 
     public string? Email { get; set; }
 
@@ -31,4 +31,5 @@ public partial class Customer
 
     public long? CompanyId { get; set; }
     public virtual Company? Company { get; set; }
+    public virtual ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
 }

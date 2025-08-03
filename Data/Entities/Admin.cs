@@ -31,4 +31,7 @@ public partial class Admin
 
     public long? RoleId { get; set; }
     public virtual AdminRole? AdminRole { get; set; }
+    public virtual ICollection<AccessToken> AccessTokens { get; set; } = new List<AccessToken>();
+
+    public virtual ICollection<ProductStockIn> ProductStockIns { get; set; } = new List<ProductStockIn>();
 }

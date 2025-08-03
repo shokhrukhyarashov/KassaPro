@@ -16,4 +16,7 @@ public partial class AdminRole
     public DateTime? CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
+    public long? CompanyId { get; set; }
+    public virtual Company? Company { get; set; }
+    public virtual ICollection<Admin> Admins { get; set; } = new List<Admin>();
 }

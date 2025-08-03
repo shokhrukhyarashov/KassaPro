@@ -25,4 +25,5 @@ public partial class Account
 
     public long? CompanyId { get; set; }
     public virtual Company? Company { get; set; }
+    public virtual ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
 }
